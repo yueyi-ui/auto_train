@@ -1,0 +1,36 @@
+{
+  "target_metric": "metrics/mAP50(M)",
+  "target_value": 0.76,
+  "max_trials": 8,
+  "max_wall_minutes": 900,
+  "min_improvement": 0.005,
+  "plateau_trials": 3,
+  "training": {
+    "data": "/data/cubit_896_v2/data.yaml",
+    "weights": "/data/yolo11n-seg.pt",
+    "project": "/data/auto_train_runs_optuna0",
+    "device": "0",
+    "workers": 4,
+    "epochs": 40,
+    "batch": 16,
+    "imgsz": 640,
+    "lr0": 0.0005,
+    "warmup": 3,
+    "patience": 12,
+    "amp": true,
+    "fraction": 0.25,
+    "cache": true,
+    "distill_model": null,
+    "dis": 6.0
+  },
+  "search_space": {
+    "lr0": {"min": 1e-5, "max": 0.003},
+    "batch": [8, 16, 24],
+    "epochs": {"min": 30, "max": 50},
+    "imgsz": [512, 640],
+    "warmup": {"min": 0, "max": 4},
+    "patience": {"min": 8, "max": 20},
+    "workers": [2, 4],
+    "amp": [true, false]
+  }
+}

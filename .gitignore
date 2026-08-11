@@ -1,0 +1,20 @@
+__pycache__/
+*.pyc
+
+# API keys and local secrets
+config.local.json
+config.local.server.json
+*.local.json
+
+# Runtime artifacts
+*.db
+auto_train.log
+experiments*.json
+
+# Large model/data files
+*.pt
+*.onnx
+*.paddle
+*.tar
+*.tar.gz
+*.zip
