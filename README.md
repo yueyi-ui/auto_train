@@ -26,6 +26,10 @@ auto_train_deploy/
     └── config.local.example.json # API 配置模板（复制为 config.local.json）
 ```
 
+## 安全与隐私
+
+本仓库只包含可公开的自动化训练代码和配置模板，不包含 API 密钥、训练权重、数据集、Optuna 数据库或运行日志。API 配置请复制 `auto_train/config.local.example.json` 为 `auto_train/config.local.json` 并填入自己的密钥，该文件已被 `.gitignore` 排除，不会提交。
+
 ## 环境要求
 
 - Python 3.10+，PyTorch CUDA 可用
