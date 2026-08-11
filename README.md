@@ -28,7 +28,7 @@ auto_train_deploy/
 
 ## 安全与隐私
 
-本仓库只包含可公开的自动化训练代码和配置模板，不包含 API 密钥、训练权重、数据集、Optuna 数据库或运行日志。API 配置请复制 `auto_train/config.local.example.json` 为 `auto_train/config.local.json` 并填入自己的密钥，该文件已被 `.gitignore` 排除，不会提交。
+本仓库只包含可公开的自动化训练代码和配置模板，不包含 API 密钥、训练权重、数据集、Optuna 数据库或运行日志。API 配置请复制 `auto_train/config.local.example.json` 为 `auto_train/config.local.json` 并填入自己的密钥。
 
 ## 环境要求
 
@@ -90,8 +90,7 @@ python make_yaml_from_labels.py --data /path/to/dataset --names class1,class2,cl
 }
 ```
 
-LLM 调参的 API 信息放在 `config.local.json`（由主循环自动合并，不要提交到仓库）：
-
+LLM 调参的 API 信息放在 `config.local.json`
 ```bash
 cp auto_train/config.local.example.json auto_train/config.local.json
 ```
